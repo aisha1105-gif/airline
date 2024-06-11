@@ -26,28 +26,27 @@ class AirlineReservationForm:
        image_label.image = image
 
     # Labels and Entry Widgets
-       tk.Label(self.root, text="First Name", bg="white").grid(row=1, column=0, padx=10, pady=10, sticky="e")
+       tk.Label(self.root, text="First Name", bg="sky blue").grid(row=2, column=0, padx=10, pady=10, sticky="e")
        self.first_name = tk.Entry(self.root)
-       self.first_name.grid(row=1, column=1, padx=10, pady=10, sticky="w")
+       self.first_name.grid(row=2, column=1, padx=10, pady=10, sticky="w")
 
-       tk.Label(self.root, text="Last Name", bg="white").grid(row=2, column=0, padx=10, pady=10, sticky="e")
+       tk.Label(self.root, text="Last Name", bg="sky blue").grid(row=3, column=0, padx=10, pady=10, sticky="e")
        self.last_name = tk.Entry(self.root)
-       self.last_name.grid(row=2, column=1, padx=10, pady=10, sticky="w")
+       self.last_name.grid(row=3, column=1, padx=10, pady=10, sticky="w")
 
-       tk.Label(self.root, text="Phone Number", bg="white").grid(row=4, column=0, padx=10, pady=10, sticky="e")
+       tk.Label(self.root, text="Phone Number", bg="sky blue").grid(row=5, column=0, padx=10, pady=10, sticky="e")
        self.phone = tk.Entry(self.root)
-       self.phone.grid(row=4, column=1, padx=10, pady=10, sticky="w")
+       self.phone.grid(row=5, column=1, padx=10, pady=10, sticky="w")
 
     # Proceed Button
-       tk.Button(self.root, text="Book", command=self.proceed, bg="#2196f3", fg="white").grid(row=8, columnspan=2, pady=10)
+       tk.Button(self.root, text="Book", command=self.proceed, bg="#2196f3", fg="white").grid(row=9, columnspan=2, pady=10)
 
     # Exit button
-       tk.Button(self.root, text="Exit", command=self.exit_program, bg="#4caf50", fg="white").grid(row=9, columnspan=2, pady=10)
+       tk.Button(self.root, text="Exit", command=self.exit_program, bg="#4caf50", fg="white").grid(row=10, columnspan=2, pady=10)
 
     # Text label below the image
        text_label = tk.Label(self.root, text="Welcome to Skyline Aviation", bg="Royal Blue", fg="white", font=("Helvetica", 16))
-       text_label.grid(row=10, columnspan=2, pady=10, sticky="nsew")  # Center align vertically and horizontally
-    
+       text_label.grid(row=1, columnspan=2, pady=10, sticky="nsew") 
     def proceed(self):
         # Execute the external script
         try:
@@ -84,4 +83,5 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = AirlineReservationForm(root)
     root.mainloop()
+   
    
