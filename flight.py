@@ -11,7 +11,7 @@ class AirlineReservationForm:
         icon = tk.PhotoImage(file="3.png")
         # Setting the icon using the iconphoto() method
         root.iconphoto(True, icon)
-        self.root.configure(bg="Royal Blue")  # Set background color
+        self.root.configure(bg="sky blue")  # Set background color
         self.create_widgets()
         
     def create_widgets(self):
